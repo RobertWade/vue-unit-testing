@@ -1,13 +1,13 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import StarRating from '@/components/StarRating.vue';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg },
+describe('StarRating.vue', () => {
+  it('renders props.rating when passed', () => {
+    const rating = 1;
+    const wrapper = shallowMount(StarRating, {
+      propsData: { rating },
     });
-    expect(wrapper.text()).to.include(msg);
+    expect(typeof rating).to.include('number')
   });
 });
